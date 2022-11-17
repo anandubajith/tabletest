@@ -52,10 +52,11 @@ export default function MuiTable({data, loading}) {
                     enableColumnFilters={false}
                     enablePagination={true}
                     positionPagination={"bottom"}
+                    enableGlobalFilter={true}
                     enableSorting={true}
-                    state={{ isLoading: loading }}
+                    state={{ isLoading: loading, showGlobalFilter: true }}
                     enableBottomToolbar={true}
-                    enableTopToolbar={false}
+                    enableTopToolbar={true}
                     muiTableBodyRowProps={{ hover: false }}
                 />
             </Container>
