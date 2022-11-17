@@ -14,6 +14,7 @@ export default function HomePage() {
                 <li><a href="https://ant.design/components/table/">https://ant.design/components/table/</a></li>
                 <li><a href="https://www.material-react-table.com/">https://www.material-react-table.com/</a></li>
             </ul>
+            Both have loading UIs, page would need to be refreshed after navigating to the URL, as data is fetched in App HOC
         </Card>
     )
 }
