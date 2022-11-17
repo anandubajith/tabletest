@@ -1,4 +1,3 @@
-// https://stackblitz.com/edit/react-s6hr8t?file=src%2FDraggableTable.css
 import { Alert, Layout, Spin, Table, Tag } from 'antd';
 import React from 'react';
 
