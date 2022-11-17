@@ -1,0 +1,11 @@
+@import '~antd/dist/antd.css';
+.logo {
+  float: left;
+  color: #fff;
+}
+.site-layout-content {
+    min-height: calc(100vh - 64px)
+}
+.site-layout-background {
+  background: #fff;
+}
