@@ -1,5 +1,5 @@
 // https://stackblitz.com/edit/react-s6hr8t?file=src%2FDraggableTable.css
-import { Alert, Layout, Pagination, Spin, Table, Tag } from 'antd';
+import { Alert, Layout, Spin, Table, Tag } from 'antd';
 import React, { useEffect, useState } from 'react';
 import getUsers from '../api.js'
 
