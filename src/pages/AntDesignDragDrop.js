@@ -29,6 +29,25 @@ export default function AntDesignDragDrop({data, loading, error}) {
         {
             title: 'Subscription',
             dataIndex: 'subscription',
+            filters: [
+                {
+                    text: 'Idle',
+                    value: 'Idle',
+                },
+                {
+                    text: 'Active',
+                    value: 'Active',
+                },
+                {
+                    text: 'Pending',
+                    value: 'Pending',
+                },
+                {
+                    text: 'Blocked',
+                    value: 'Blocked',
+                },
+            ],
+            onFilter: (value, record) => record.subscription?.status.includes(value),
             render: ({status})=> {
                 return (<Tag color={COLOR_MAP[status]}>{status}</Tag>)
             }
