@@ -1,10 +1,8 @@
 // https://stackblitz.com/edit/react-s6hr8t?file=src%2FDraggableTable.css
 import { Alert, Layout, Spin, Table, Tag } from 'antd';
-import React, { useEffect, useState } from 'react';
-import getUsers from '../api.js'
+import React from 'react';
 
 const { Header, Content} = Layout;
-
 
 const COLOR_MAP = {
     'Idle': 'blue',
@@ -13,11 +11,7 @@ const COLOR_MAP = {
     'Blocked': 'volcano'
 }
 
-const DEFAULT_COUNT = 100;
-export default function AntDesignDragDrop() {
-    const [data, setData] = useState([]);
-    const [error, setError] = useState(false);
-    const [loading, setLoading] = useState(true);
+export default function AntDesignDragDrop({data, loading, error}) {
 
     const columns = [
         {
@@ -46,13 +40,6 @@ export default function AntDesignDragDrop() {
         },
     ];
 
-    useEffect(() => {
-        getUsers(DEFAULT_COUNT)
-            .then(res => setData(res))
-            .catch(() => setError(true))
-            .finally(() => setLoading(false))
-
-    }, [])
 
     return (
         <Layout className="layout">
