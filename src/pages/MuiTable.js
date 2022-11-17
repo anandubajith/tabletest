@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import MaterialReactTable from 'material-react-table';
 
-export default function MuiTable({data, loading, error}) {
+export default function MuiTable({data, loading}) {
 
 
     const columns = [
@@ -36,30 +36,29 @@ export default function MuiTable({data, loading, error}) {
 
     return (
         <Fragment>
-        <CssBaseline />
-        <AppBar position="static">
-        <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-        Supermind
-        </Typography>
-        </Toolbar>
-        </AppBar>
-        <Container maxWidth="lg" style={{marginTop: '16px'}}>
-
-        <MaterialReactTable
-        columns={columns}
-        data={data}
-        enableColumnActions={false}
-        enableColumnFilters={false}
-        enablePagination={true}
-        positionPagination={"bottom"}
-        enableSorting={true}
-        state={{ isLoading: loading }}
-        enableBottomToolbar={true}
-        enableTopToolbar={false}
-        muiTableBodyRowProps={{ hover: false }}
-        />
-        </Container>
+            <CssBaseline />
+            <AppBar position="static">
+            <Toolbar>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Supermind
+                </Typography>
+            </Toolbar>
+            </AppBar>
+            <Container maxWidth="lg" style={{marginTop: '16px'}}>
+                <MaterialReactTable
+                    columns={columns}
+                    data={data}
+                    enableColumnActions={false}
+                    enableColumnFilters={false}
+                    enablePagination={true}
+                    positionPagination={"bottom"}
+                    enableSorting={true}
+                    state={{ isLoading: loading }}
+                    enableBottomToolbar={true}
+                    enableTopToolbar={false}
+                    muiTableBodyRowProps={{ hover: false }}
+                />
+            </Container>
         </Fragment>
     )
 }

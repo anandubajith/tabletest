@@ -47,21 +47,18 @@ export default function AntDesignDragDrop({data, loading, error}) {
                 <div className="logo"> Supermind</div>
             </Header>
             <Content style={{ padding: '10px 50px', }} >
-                <div className="site-layout-content">
-        { error && (
-
-            <Alert
-            message="Error"
-            description="Error when loading data, please try refreshing the page"
-            type="error"
-            showIcon
-            style={{marginBottom: '10px'}}
-            />
-        )}
-        <Spin spinning={loading} size="large">
-        <Table columns={columns} dataSource={data} />
-        </Spin>
-                </div>
+                { error && (
+                    <Alert
+                        message="Error"
+                        description="Error when loading data, please try refreshing the page"
+                        type="error"
+                        showIcon
+                        style={{marginBottom: '10px'}}
+                        />
+                )}
+                <Spin spinning={loading} size="large">
+                    <Table columns={columns} dataSource={data} />
+                </Spin>
             </Content>
         </Layout>
     )
