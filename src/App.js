@@ -34,7 +34,7 @@ function App() {
         },
         {
             path: "/ant",
-            element: <AntDesignDragDrop data={data} loading={loading} error={error}/>
+            element: <AntDesignDragDrop data={data} setData={setData} loading={loading} error={error}/>
         },
     ]);
     return (
